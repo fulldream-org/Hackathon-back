@@ -1,0 +1,2 @@
+INSERT INTO "update_comment"(value, id_user, id_update)
+VALUES ('Your family is in our family''s thoughts and prayers! May the Lord provide abundantly in all things','1bd1fa73-ceb4-4825-a631-c7dcb08effc0','15b290b3-0745-49d0-aa1b-36bd9f525d1e');
