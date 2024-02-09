@@ -94,6 +94,7 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 CREATE TABLE "update_comment" (
 	id uuid NOT NULL DEFAULT gen_random_uuid(),
 	value text NOT NULL,
+    "time" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	id_user uuid NOT NULL,
 	id_update uuid NOT NULL,
 	CONSTRAINT update_comment_pk PRIMARY KEY (id)
