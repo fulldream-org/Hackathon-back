@@ -11,14 +11,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 @Configuration
 @RequiredArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
-  private final UserRepository userRepo;
+    private final UserRepository userRepo;
 
-  @Override
-  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    User user = userRepo.findByUsername(username);
-    if (user == null) {
-      throw new UsernameNotFoundException(username + " not found");
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepo.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username + " not found");
+        }
+        return new UserDetailsImpl(user);
     }
-    return new UserDetailsImpl(user);
-  }
 }
