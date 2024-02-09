@@ -10,8 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @EnableConfigurationProperties({RsaKeyProperties.class, StorageServiceProperties.class})
 public class HackathonBackApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(HackathonBackApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(HackathonBackApplication.class, args);
+  }
 }
