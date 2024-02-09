@@ -1,0 +1,4 @@
+INSERT INTO "update"(id, title, content, id_post, date)
+VALUES('15b290b3-0745-49d0-aa1b-36bd9f525d1e', 'Early Thanks', 'I would like to thank all donators who have been donating, the rewards will be given at a later date when the surgery is done', 'e401d629-2afc-45f2-9700-b536dcf6ff06', CURRENT_DATE + INTERVAL '3 days');
+INSERT INTO "update"(id, title, content, id_post, date)
+VALUES('24d40ee2-b298-4ec4-88f9-a520adaa95ed', 'Status update', E'Greetings,\n We are all doing fine for now. Thank you for sending your kind messages to our socials. We are still struggling but you gave us the courage to keep on keeping on.', '5eaf1363-39cd-47a0-ae4d-0304f46bfa2b', CURRENT_DATE + INTERVAL '6 days');
