@@ -6,7 +6,8 @@ CREATE TABLE "post" (
 	goal double precision NOT NULL,
 	id_user uuid NOT NULL,
 	end_date date NOT NULL,
-	CONSTRAINT post_pk PRIMARY KEY (id)
+	CONSTRAINT post_pk PRIMARY KEY (id),
+    CONSTRAINT end_date_after_creation CHECK (end_date > creation_date)
 );
 
 CREATE TABLE "user" (
@@ -24,7 +25,7 @@ CREATE TABLE "donation" (
 	date date NOT NULL DEFAULT current_date,
 	id_post uuid NOT NULL,
 	id_user uuid NOT NULL,
-	is_anonym boolean NOT NULL DEFAULT false,
+	is_anonymous boolean NOT NULL DEFAULT false,
 	CONSTRAINT backers_pk PRIMARY KEY (id)
 );
 
