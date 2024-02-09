@@ -1,6 +1,5 @@
 package hack.fulldream.hackathonback.controller;
 
-
 import hack.fulldream.hackathonback.models.User;
 import hack.fulldream.hackathonback.repository.UserRepository;
 import hack.fulldream.hackathonback.service.PasswordService;
@@ -12,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class UserController {
-    private final UserRepository userRepo;
-    private final PasswordService passwordService;
+  private final UserRepository userRepo;
+  private final PasswordService passwordService;
 
-    @PostMapping("/signup")
-    public User signup(@RequestBody User user) {
-        user.setPassword(passwordService.encode(user.getPassword()));
-        return userRepo.save(user);
-    }
+  @PostMapping("/signup")
+  public User signup(@RequestBody User user) {
+    user.setPassword(passwordService.encode(user.getPassword()));
+    return userRepo.save(user);
+  }
 }
