@@ -1,6 +1,8 @@
 package hack.fulldream.hackathonback.models;
 
 import jakarta.persistence.*;
+
+import java.sql.Timestamp;
 import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +17,7 @@ public class UpdateComment {
   private UUID id;
 
   private String value;
+  private Timestamp time;
 
   @ManyToOne
   @JoinColumn(name = "id_user")

@@ -23,11 +23,11 @@ public class PostService {
     return postRepository.findAll();
   }
 
-  public Optional<Post> findByTitle(String title) {
-    return postRepository.findByTitle(title);
+  public List<Post> findByTitle(String title) {
+    return postRepository.findByTitleContainsIgnoreCase(title);
   }
 
-  public Post updatePostById(UUID id) {
-    return postRepository.updateById(id);
+  public Post save(Post toSave) {
+    return postRepository.save(toSave);
   }
 }

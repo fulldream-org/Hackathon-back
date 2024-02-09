@@ -25,8 +25,4 @@ public class RewardService {
     }
     return toDelete;
   }
-
-  public Reward updateReward(UUID id) {
-    return rewardRepository.updateById(id);
-  }
 }

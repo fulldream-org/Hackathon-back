@@ -15,6 +15,10 @@ public class UserService {
     this.userRepository = userRepository;
   }
 
+  public User save(User user) {
+    return userRepository.save(user);
+  }
+
   public User findByUserName(String name) {
     return userRepository.findByUsername(name);
   }
@@ -24,12 +28,7 @@ public class UserService {
   }
 
   public List<User> findAllUsers() {
-    List<User> allUsers = userRepository.findAll();
-    return allUsers;
-  }
-
-  public User updateUser(UUID id) {
-    return userRepository.updateById(id);
+      return userRepository.findAll();
   }
 
   public Optional<User> deleteUser(UUID id) {
