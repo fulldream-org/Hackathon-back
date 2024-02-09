@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UpdateRepository extends JpaRepository<Update, UUID> {
-  Update updateById(UUID id);
 }

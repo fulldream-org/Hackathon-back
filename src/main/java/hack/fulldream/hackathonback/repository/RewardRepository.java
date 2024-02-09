@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RewardRepository extends JpaRepository<Reward, UUID> {
-  Reward updateById(UUID id);
 }

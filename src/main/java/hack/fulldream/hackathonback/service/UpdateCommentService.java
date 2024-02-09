@@ -21,8 +21,4 @@ public class UpdateCommentService {
   public List<UpdateComment> findAllUpdate() {
     return updateCommentRepository.findAll();
   }
-
-  public UpdateComment updateUpdate(UUID id) {
-    return updateCommentRepository.updateById(id);
-  }
 }

@@ -23,10 +23,6 @@ public class UpdateService {
     return updateRepository.findAll();
   }
 
-  public Update updateUpdate(UUID id) {
-    return updateRepository.updateById(id);
-  }
-
   public Optional<Update> deleteUpdate(UUID id) {
     Optional<Update> toDelete = updateRepository.findById(id);
     if (toDelete.isPresent()) {

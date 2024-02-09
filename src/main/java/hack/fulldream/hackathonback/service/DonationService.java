@@ -15,7 +15,7 @@ public class DonationService {
     this.donationRepository = donationRepository;
   }
 
-  public Optional<Donation> findDonationByid(UUID id) {
+  public Optional<Donation> findDonationById(UUID id) {
     return donationRepository.findById(id);
   }
 

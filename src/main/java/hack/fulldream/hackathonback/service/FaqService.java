@@ -14,8 +14,8 @@ public class FaqService {
     this.faqRepository = faqRepository;
   }
 
-  public Faq updateById(UUID id) {
-    return faqRepository.updateById(id);
+  public Faq updateById(Faq toSave) {
+    return faqRepository.save(toSave);
   }
 
   public Optional<Faq> deleteFaq(UUID id) {
