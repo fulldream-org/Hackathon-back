@@ -16,6 +16,8 @@ public class DonationCache {
 
   private Double amount;
 
+  private String picture;
+
   @ManyToOne
   @JoinColumn(name = "id_user")
   private User user;
