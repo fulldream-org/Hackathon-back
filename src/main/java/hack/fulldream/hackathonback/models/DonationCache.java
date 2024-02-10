@@ -17,6 +17,10 @@ public class DonationCache {
   private Double amount;
 
   @ManyToOne
+  @JoinColumn(name = "id_user")
+  private User user;
+
+  @OneToOne
   @JoinColumn(name = "id_donation")
   private Donation donation;
 }

@@ -5,6 +5,7 @@ import hack.fulldream.hackathonback.configs.StorageServiceProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
 @EnableConfigurationProperties({RsaKeyProperties.class, StorageServiceProperties.class})

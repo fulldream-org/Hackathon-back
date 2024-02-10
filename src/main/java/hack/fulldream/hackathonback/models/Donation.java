@@ -16,6 +16,7 @@ public class Donation {
 
   private String description;
   private Date date;
+  private Boolean isAnonymous;
 
   @ManyToOne
   @JoinColumn(name = "id_post")

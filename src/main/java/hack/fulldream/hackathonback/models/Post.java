@@ -2,9 +2,11 @@ package hack.fulldream.hackathonback.models;
 
 import jakarta.persistence.*;
 import java.sql.Date;
+import java.time.Instant;
 import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 @Getter
 @Setter

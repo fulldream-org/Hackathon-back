@@ -5,6 +5,9 @@ import hack.fulldream.hackathonback.repository.UserRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,8 +22,8 @@ public class UserService {
     return userRepository.save(user);
   }
 
-  public User findByUserName(String name) {
-    return userRepository.findByUsername(name);
+  public User findByEmail(String name) {
+    return userRepository.findByEmail(name);
   }
 
   public Optional<User> findUserById(UUID id) {
@@ -29,6 +32,10 @@ public class UserService {
 
   public List<User> findAllUsers() {
       return userRepository.findAll();
+  }
+
+  public Page<User> findAllUsers(Pageable pageable) {
+    return userRepository.findAll(pageable);
   }
 
   public Optional<User> deleteUser(UUID id) {

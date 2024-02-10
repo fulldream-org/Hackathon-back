@@ -16,7 +16,6 @@ public class User {
     UUID id;
     String firstName;
     String lastName;
-    String username;
     String email;
     String password;
 }
